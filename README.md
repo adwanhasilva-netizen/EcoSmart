@@ -1,5 +1,4 @@
-# EcoSmart
-Sistema inteligente de monitoramento de energia solar para escolas públicas.
+
 # EcoSmart
 
 Sistema inteligente de monitoramento de energia solar para escolas públicas.
