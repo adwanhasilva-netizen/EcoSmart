@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Dashboard EcoSmart</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+}
+
+canvas{
+    max-width:700px;
+    margin:auto;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Dashboard EcoSmart</h1>
+
+<canvas id="grafico"></canvas>
+
+<script>
+
+const ctx =
+document.getElementById('grafico');
+
+new Chart(ctx, {
+
+type: 'line',
+
+data: {
+
+labels: [
+'08h',
+'10h',
+'12h',
+'14h',
+'16h'
+],
+
+datasets: [{
+
+label: 'Energia Solar (%)',
+
+data: [20,40,80,60,30],
+
+borderWidth: 3
+
+}]
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
