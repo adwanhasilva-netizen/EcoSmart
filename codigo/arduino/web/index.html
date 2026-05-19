@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSmart Monitoramento</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container{
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        h1{
+            color: #22c55e;
+        }
+
+        .card{
+            background-color: #334155;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .energia{
+            font-size: 40px;
+            color: #22c55e;
+        }
+
+        .status{
+            font-size: 25px;
+            margin-top: 10px;
+        }
+
+        button{
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #22c55e;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>EcoSmart</h1>
+
+        <p>Sistema Inteligente de Monitoramento Solar</p>
+
+        <div class="card">
+
+            <h2>Energia Gerada</h2>
+
+            <div class="energia" id="energia">0%</div>
+
+            <div class="status" id="status">
+                Aguardando leitura...
+            </div>
+
+        </div>
+
+        <button onclick="gerarEnergia()">
+            Atualizar Monitoramento
+        </button>
+
+    </div>
+
+    <script>
+
+        function gerarEnergia(){
+
+            let energia = Math.floor(Math.random() * 100);
+
+            document.getElementById("energia").innerHTML = energia + "%";
+
+            if(energia >= 50){
+
+                document.getElementById("status").innerHTML =
+                "Energia Solar Estável";
+
+                document.getElementById("status").style.color = "#22c55e";
+
+            }else{
+
+                document.getElementById("status").innerHTML =
+                "Baixa Geração de Energia";
+
+                document.getElementById("status").style.color = "red";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
