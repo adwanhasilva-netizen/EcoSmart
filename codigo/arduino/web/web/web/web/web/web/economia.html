@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Economia EcoSmart</title>
+
+<style>
+
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+}
+
+.container{
+    margin-top:100px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Economia de Energia</h1>
+
+<h2 id="economia">R$ 0</h2>
+
+<button onclick="calcularEconomia()">
+Calcular Economia
+</button>
+
+</div>
+
+<script>
+
+function calcularEconomia(){
+
+let economia =
+Math.floor(Math.random() * 500);
+
+document.getElementById("economia")
+.innerHTML =
+"R$ " + economia;
+
+}
+
+</script>
+
+</body>
+</html>
